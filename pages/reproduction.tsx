@@ -1,6 +1,6 @@
 export default function Reproduction() {
 
-  //const data = fetch('/api/cache-route');
+  const data = fetch('https://00134874-minimal-repro.preview.vercel-support.app/api/cache-route');
 
   return (
     <>
