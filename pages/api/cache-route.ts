@@ -7,14 +7,14 @@ type Data = {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 
-  const result = await fetch('/api/cache-date');
+  const result = await fetch('https://00134874-minimal-repro.preview.vercel-support.app/api/cache-date');
   
   const body = await result.json();
   console.log(body);
 
   res.setHeader(
     "Cache-Control",
-    "public, max-age=0, s-maxage=300 stale-while-revalidate=59",
+    "public, max-age=0, s-maxage=300, stale-while-revalidate=59",
   );
   res.status(200).json({ result: body.time });
 }
