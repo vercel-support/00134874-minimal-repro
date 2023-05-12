@@ -7,7 +7,7 @@ type Data = {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
 
-  const result = await fetch('https://nextjs-starter-kit-2-webmonkey-sebastianroming-vtest314-billing.vercel.app/api/cache-test');
+  const result = await fetch('/api/cache-date');
   
   const body = await result.json();
   console.log(body);
