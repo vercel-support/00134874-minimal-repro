@@ -1,6 +1,6 @@
 export default function Reproduction() {
 
-  const data = fetch('/api/cache-route');
+  //const data = fetch('/api/cache-route');
 
   return (
     <>
